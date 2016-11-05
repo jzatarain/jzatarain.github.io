@@ -1,0 +1,37 @@
+{
+  "name": "jzatarain.github.io",
+  "homepage": "https://github.com/jzatarain/jzatarain.github.io",
+  "authors": [
+    "Joshua Zatarain <ejosue.15@gmail.com>"
+  ],
+  "description": "red-ribbon",
+  "main": "",
+  "keywords": [
+    "red-ribbon",
+    "jzatarain",
+    "josue",
+    "zatarain"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "font-awesome": "^4.6.3",
+    "normalize-css": "^5.0.0",
+    "angular-loading-bar": "^0.9.0",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "materialize": "^0.97.8",
+    "hint.css": "hint-css#^2.4.0",
+    "angular-messages": "^1.5.8"
+  }
+}

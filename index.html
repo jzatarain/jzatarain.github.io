@@ -1,23 +1,42 @@
----
-layout: default
----
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--metadata-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="description" content="Red-Ribbon portafolio">
+        <meta name="keywords" content="red-ribbon">
+        <meta name="author" content="Josué Zatarain">
+        
+        <!--css-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css"/>
+        <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" media="screen,projection"/>
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" type="text/css"/>
+        <link rel="stylesheet" href="bower_components/hint.css/hint.min.css" type="text/css"/>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" type="text/css"/>
+        
+        <!--js-->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        
+        <!--angular-->
+        <script type="text/javascript" src="app/controllers/home.controller.js"></script>
+        <script type="text/javascript" src="app/directives/header.directive.js"></script>
+    </head>
+    <body ng-app="red-ribbon">
+        <my-header></my-header>
+        <section ng-view></section>
+        <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+    </body>
+</html>
