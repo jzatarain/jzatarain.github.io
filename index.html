@@ -15,14 +15,15 @@
         <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" media="screen,projection"/>
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" type="text/css"/>
         <link rel="stylesheet" href="bower_components/hint.css/hint.min.css" type="text/css"/>
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+        <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />-->
         <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" type="text/css"/>
+        <link rel="stylesheet" href="css/red-ribbon.css" type="text/css" />
         
         <!--js-->
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
-        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <!--<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
@@ -33,10 +34,19 @@
         <!--angular-->
         <script type="text/javascript" src="app/controllers/home.controller.js"></script>
         <script type="text/javascript" src="app/directives/header.directive.js"></script>
+        <script type="text/javascript" src="app/directives/footer.directive.js"></script>
+        
     </head>
     <body ng-app="red-ribbon">
         <my-header></my-header>
-        <section ng-view></section>
-        <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+        
+        <main ng-view class="container"></main>
+        
+        <my-footer></my-footer>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.scrollspy').scrollSpy();
+            });
+        </script>
     </body>
 </html>

@@ -13,7 +13,7 @@ function router($routeProvider){
         .when('/', {
             templateUrl : 'app/views/home.template.html',
             controller  : 'homeController',
-            controlleras: 'vm'
+            controllerAs: 'vm'
         })
 
         /*// route for the about page
