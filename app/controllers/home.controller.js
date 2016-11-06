@@ -16,7 +16,11 @@ function HomeController($http, $scope){
     function getDailyBingImage(){
         $http.get('https://api.nasa.gov/planetary/apod?api_key=59ic3XmFOKWV8EbBOLHLOclSDYmCDgaO4uRawAbh')
         .then(function(response){
-            vm.dailyImage = response.data.url;
+            vm.dailyImage = {
+                url: response.data.url,
+                explanation: response.data.explanation,
+                title: response.data.title
+            };
         }, function(err){
             console.log(err);
         });

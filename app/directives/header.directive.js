@@ -20,6 +20,7 @@ function myHeader(){
     
     function linkFunc(scope, el, attr, vm){
         $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown();
     }
 }
 

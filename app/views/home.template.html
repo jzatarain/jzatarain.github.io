@@ -1,11 +1,17 @@
 <div class="hoverable">
   <div class="card center-allign medium">
-    <div class="card-image">
-      <img ng-src="{{vm.dailyImage}}">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" ng-src="{{vm.dailyImage.url}}">
       <span class="card-title">Bienvenido</span>
     </div>
     <div class="card-content">
       <p class="flow-text"><b>Imágen del día via NASA</b></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">
+        {{vm.dailyImage.title}}<i class="material-icons right">close</i>
+      </span>
+      <p class="flow-text">{{vm.dailyImage.explanation}}</p>
     </div>
   </div>
 </div>
