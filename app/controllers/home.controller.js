@@ -1,4 +1,4 @@
-/*global angular*/
+/*global angular, $, baffle*/
 angular
     .module("red-ribbon")
     .controller('homeController', HomeController);
@@ -10,11 +10,16 @@ function HomeController($http, $scope){
 
     initializeComponents();
     function initializeComponents(){
-        getDailyBingImage();
+        var baffled = baffle(".white-text").start();
+        getDailyBingImage()
+        .finally(function(){
+            baffled.reveal(2000);
+        });
     }
     
     function getDailyBingImage(){
-        $http.get('https://api.nasa.gov/planetary/apod?api_key=59ic3XmFOKWV8EbBOLHLOclSDYmCDgaO4uRawAbh')
+        
+        return $http.get('https://api.nasa.gov/planetary/apod?api_key=59ic3XmFOKWV8EbBOLHLOclSDYmCDgaO4uRawAbh')
         .then(function(response){
             vm.dailyImage = {
                 url: response.data.url,
