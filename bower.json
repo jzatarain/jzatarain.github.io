@@ -26,6 +26,7 @@
     "font-awesome": "^4.6.3",
     "hint.css": "hint-css#^2.4.0",
     "materialize": "^0.97.8",
-    "normalize-css": "^5.0.0"
+    "normalize-css": "^5.0.0",
+    "matchHeight": "matchheight#^0.7.2"
   }
 }

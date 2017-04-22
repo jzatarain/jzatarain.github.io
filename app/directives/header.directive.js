@@ -8,7 +8,7 @@ myHeader.$inject = [];
 function myHeader(){
     var directive = {
         restrict: 'EA',
-        templateUrl: 'app/views/frontend-header.template.html',
+        templateUrl: 'app/views/frontend/header.template.html',
         scope: true,
         controller: MyHeaderController,
         controllerAs: 'vm',

@@ -8,7 +8,7 @@ myFooter.$inject = [];
 function myFooter(){
     var directive = {
         restrict: 'EA',
-        templateUrl: 'app/views/frontend-footer.template.html',
+        templateUrl: 'app/views/frontend/footer.template.html',
         scope: true,
         controller: MyFooterController,
         controllerAs: 'vm',

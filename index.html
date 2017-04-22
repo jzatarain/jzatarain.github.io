@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
         <meta name="description" content="Red-Ribbon portafolio">
-        <meta name="keywords" content="red-ribbon">
+        <meta name="keywords" content="red-ribbon, photography, personal project">
         <meta name="author" content="Josué Zatarain">
         
         <!--css-->
@@ -22,6 +22,9 @@
         <!--js-->
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+        <!--<script type="text/javascript" src="node_modules/grade-js/docs/dist/grade.js"></script>-->
+        <script type="text/javascript" src="node_modules/baffle/dist/baffle.min.js"></script>
+        
         <!--<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
@@ -34,6 +37,7 @@
         <!--angular-->
         <script type="text/javascript" src="app/controllers/home.controller.js"></script>
         <script type="text/javascript" src="app/directives/header.directive.js"></script>
+        <script type="text/javascript" src="app/directives/gradientImage.directive.js"></script>
         <script type="text/javascript" src="app/directives/footer.directive.js"></script>
         
     </head>
@@ -43,10 +47,8 @@
         <main ng-view class="container"></main>
         
         <my-footer></my-footer>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.scrollspy').scrollSpy();
-            });
-        </script>
+
+        <script type="text/javascript" src="app/red-ribbon.js"></script>
+        <script type="text/javascript" src="bower_components/matchHeight/dist/jquery.matchHeight-min.js"></script>
     </body>
 </html>
