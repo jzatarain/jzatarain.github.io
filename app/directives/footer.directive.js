@@ -3,7 +3,7 @@ angular
     .module("red-ribbon")
     .directive('myFooter', myFooter);
 
-myFooter.$inject = [];
+MyFooterController.$inject = [];
 
 function myFooter(){
     var directive = {
