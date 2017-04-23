@@ -1,5 +1,5 @@
 <div class="hoverable">
-    <div class="card">
+    <div class="card" ng-cloak>
         <div class="card-image waves-effect waves-block waves-light">
             <img ng-src="{{vm.dailyImage.url}}" class="activator"></img>
             <span class="card-title flow-text">Welcome</span>
@@ -12,9 +12,9 @@
         </div>
         <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">
-                {{::vm.dailyImage.title}}<i class="material-icons right">close</i>
+                {{vm.dailyImage.title}}<i class="material-icons right">close</i>
             </span>
-            <p class="flow-text">{{::vm.dailyImage.explanation}}</p>
+            <p class="flow-text">{{vm.dailyImage.explanation}}</p>
         </div>
     </div>
 </div>
