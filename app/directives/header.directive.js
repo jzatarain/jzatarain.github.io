@@ -19,8 +19,8 @@ function myHeader(){
     return directive;
     
     function linkFunc(scope, el, attr, vm){
-        // $(".button-collapse").sideNav();
-        // $(".dropdown-button").dropdown();
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown();
     }
 }
 

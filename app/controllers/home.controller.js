@@ -3,22 +3,21 @@ angular
     .module("red-ribbon")
     .controller('homeController', HomeController);
 
-HomeController.$inject = ['$http', '$scope'];
+HomeController.$inject = ['$http'];
 
-function HomeController($http, $scope){
+function HomeController($http){
     var vm = this;
 
     initializeComponents();
     function initializeComponents(){
-        var baffled = baffle(".white-text").start();
+        // var baffled = baffle(".white-text").start();
         getDailyBingImage()
         .finally(function(){
-            baffled.reveal(2000);
+            // baffled.reveal();
         });
     }
     
     function getDailyBingImage(){
-        
         return $http.get('https://api.nasa.gov/planetary/apod?api_key=59ic3XmFOKWV8EbBOLHLOclSDYmCDgaO4uRawAbh')
         .then(function(response){
             vm.dailyImage = {

@@ -20,12 +20,12 @@ function gradientImage(){
         link: {
             pre: function(scope, elem, attr, vm){
                 var img = elem.find("img:first");
-                if (img.complete){
-                    Grade(img[0]);
+                if (img[0].complete){
+                    Grade(img.parent()[0]);
                 }
                 else {
                     img.on("load", function(event){
-                        Grade(img[0]);
+                        Grade(img.parent()[0]);
                     });
                 }
                 
@@ -40,9 +40,5 @@ function gradientImage(){
 
 function gradientImageController($window) {
     var vm = this;
-    $(document).ready(function(event){
-        Grade(document.querySelectorAll(".gradient-wrap"));
-    });
-    
 }
 

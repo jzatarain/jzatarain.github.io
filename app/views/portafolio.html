@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-image">
+        <img src="../../assets/portafolio/entrance.gif" class="responsive-img"></img>
+        <span class="card-title pink-text">Welcome!</span>
+    </div>
+    <div class="card-content pink lighten-3">
+        <h5 class="white-text">You will find some of my selected photos!</h5>
+    </div>
+</div> 
+
+
+<div class="hoverable" ng-repeat="img in vm.portafolio">
+    <gradient-image img-src="'../../assets/portafolio/' + img" img-class="responsive-img center-align"></gradient-image>
+</div>
