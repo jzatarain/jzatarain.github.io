@@ -17,7 +17,9 @@ function portafolioController($scope){
         'seapanoramic.jpg',
         'towersbw.jpg',
         'santalucia1.jpg',
-        'fountain.jpg'
+        'fountain.jpg',
+        'IMG_20161112_145146225.jpg',
+        'boatMZ.jpg'
     ];
 
     initializeComponents();
