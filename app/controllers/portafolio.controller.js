@@ -24,6 +24,6 @@ function portafolioController($scope){
 
     initializeComponents();
     function initializeComponents(){
-       
+        
     }
 }

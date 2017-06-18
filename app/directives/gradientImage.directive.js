@@ -3,7 +3,7 @@ angular
     .module("red-ribbon")
     .directive('gradientImage', gradientImage);
 
-gradientImageController.$inject = ["$window"];
+gradientImageController.$inject = [];
 
 function gradientImage(){
     var directive = {
@@ -38,7 +38,7 @@ function gradientImage(){
 }
 
 
-function gradientImageController($window) {
+function gradientImageController() {
     var vm = this;
 }
 

@@ -23,7 +23,8 @@ function HomeController($http){
             vm.dailyImage = {
                 url: response.data.url,
                 explanation: response.data.explanation,
-                title: response.data.title
+                title: response.data.title,
+                media_type: response.data.media_type
             };
         }, function(err){
             console.log(err);
