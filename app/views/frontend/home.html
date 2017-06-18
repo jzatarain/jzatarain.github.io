@@ -5,7 +5,8 @@
             <span class="card-title flow-text">Welcome</span>
         </div>
         <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">
+            <span class="card-title activator grey-text text-darken-4 align-with-material-icon-div">
+                <i class="material-icons">photo</i>
                 Image of the day via the NASA
                 <i class="material-icons right">more_vert</i>
             </span>
@@ -22,7 +23,8 @@
             <iframe class="responsive-img" ng-video-src vsrc="{{vm.dailyImage.url}}"></iframe>
         </div>
         <div class="card-content">
-            <span class="card-title activator">
+            <span class="card-title activator align-with-material-icon-div">
+                <i class="material-icons">videocam</i>
                 Video of the day via the NASA
                 <i class="material-icons right">more_vert</i>
             </span>
@@ -64,13 +66,19 @@
     </div>
     <div class="card hoverable">
         <div class="card-image">
-            <img src="assets/img/system_aesthetic.jpg" class="responsive-img"></img>
+            <img src="assets/img/zucc.jpg" class="responsive-img"></img>
         </div>
         <div class="card-content white-text pink lighten-2">
-            <h4>Under Construction</h4>
+            <h4 class="flow-text align-with-material-icon-div">
+                
+                Under Construction
+                <i class="material-icons">build</i>
+            </h4>
         </div>
         <!--<div class="card-action">-->
             <!--<a href="#!/portafolio">Portafolio</a>-->
         <!--</div>-->
     </div>
 </div>
+
+<scroll-to-top-btn></scroll-to-top-btn>

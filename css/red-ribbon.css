@@ -14,3 +14,14 @@ main {
     -o-transition: all 0.5s ease;
     transition: all 5s ease;
 }
+
+.card .card-content .card-title i {
+    line-height: 32px;
+}
+
+.align-with-material-icon-div > i{
+    vertical-align: middle;
+}
+.align-with-material-icon-a > i{
+    vertical-align: bottom;
+}

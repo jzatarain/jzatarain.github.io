@@ -11,15 +11,21 @@ function router($routeProvider){
     $routeProvider
         // route for the home page
         .when('/', {
-            templateUrl : 'app/views/home.template.html',
+            templateUrl : 'app/views/frontend/home.html',
             controller  : 'homeController',
             controllerAs: 'vm'
         })
         .when('/portafolio', {
-            templateUrl: 'app/views/portafolio.html',
+            templateUrl: 'app/views/frontend/portafolio.html',
             controller: 'portafolioController',
             controllerAs: 'vm'
         })
+        .when('/about', {
+            templateUrl: 'app/views/frontend/about.html'
+        })
+        .otherwise({
+            templateUrl: 'app/views/404.html'
+        });
        
         /*// route for the about page
         .when('/about', {

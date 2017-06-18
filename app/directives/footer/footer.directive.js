@@ -1,30 +1,28 @@
 /*global angular, $*/
 angular
     .module("red-ribbon")
-    .directive('myHeader', myHeader);
+    .directive('myFooter', myFooter);
 
-myHeader.$inject = [];
+MyFooterController.$inject = [];
 
-function myHeader(){
+function myFooter(){
     var directive = {
         restrict: 'EA',
-        templateUrl: 'app/views/frontend/header.template.html',
+        templateUrl: 'app/directives/footer/footer.template.html',
         scope: true,
-        controller: MyHeaderController,
+        controller: MyFooterController,
         controllerAs: 'vm',
         bindToController: true,
         link: linkFunc
     };
-
     return directive;
     
     function linkFunc(scope, el, attr, vm){
-        $(".button-collapse").sideNav();
-        $(".dropdown-button").dropdown();
     }
 }
 
 
-function MyHeaderController() {
+function MyFooterController() {
     var vm = this;
 }
+

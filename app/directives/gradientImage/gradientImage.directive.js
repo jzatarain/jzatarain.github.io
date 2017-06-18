@@ -8,7 +8,7 @@ gradientImageController.$inject = [];
 function gradientImage(){
     var directive = {
         restrict: 'E',
-        templateUrl: 'app/views/frontend/gradientImage.template.html',
+        templateUrl: 'app/directives/gradientImage/gradientImage.template.html',
         scope: {
             imgSrc: "=",
             imgClass: "@",
