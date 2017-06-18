@@ -5,10 +5,12 @@
             <span class="card-title flow-text">Welcome</span>
         </div>
         <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4 align-with-material-icon-div">
-                <i class="material-icons">photo</i>
-                Image of the day via the NASA
-                <i class="material-icons right">more_vert</i>
+            <span class="card-title activator grey-text text-darken-4">
+                <p class="align-with-material-icon-div flow-text">
+                    <i class="material-icons">photo</i>
+                    Image of the day via the NASA
+                    <i class="material-icons right">more_vert</i>
+                </p>
             </span>
         </div>
         <div class="card-reveal">
@@ -18,15 +20,18 @@
             <p class="flow-text">{{vm.dailyImage.explanation}}</p>
         </div>
     </div>
-    <div class="card">
-        <div class="video-container card-image" ng-switch-when="video">
+    
+    <div class="card" ng-switch-when="video">
+        <div class="video-container card-image">
             <iframe class="responsive-img" ng-video-src vsrc="{{vm.dailyImage.url}}"></iframe>
         </div>
         <div class="card-content">
-            <span class="card-title activator align-with-material-icon-div">
-                <i class="material-icons">videocam</i>
-                Video of the day via the NASA
-                <i class="material-icons right">more_vert</i>
+            <span class="card-title activator">
+                <p class="flow-text align-with-material-icon-div">
+                    <i class="material-icons">videocam</i>
+                    Video of the day via the NASA
+                    <i class="material-icons right">more_vert</i>
+                </p>
             </span>
         </div>
         <div class="card-reveal">

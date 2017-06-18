@@ -25,3 +25,7 @@ main {
 .align-with-material-icon-a > i{
     vertical-align: bottom;
 }
+
+.material-icons.right{
+    margin-left: 0px!important;
+}
