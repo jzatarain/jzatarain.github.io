@@ -1,20 +1,22 @@
-/*global angular, $, baffle*/
+/*global angular, $, baffle, moment*/
 angular
     .module("red-ribbon")
     .controller('homeController', HomeController);
 
-HomeController.$inject = ['$http'];
+HomeController.$inject = ['$http', '$scope', '$interval'];
 
-function HomeController($http){
+function HomeController($http, $scope, $interval){
     var vm = this;
 
     initializeComponents();
     function initializeComponents(){
-        // var baffled = baffle(".white-text").start();
-        getDailyBingImage()
-        .finally(function(){
-            // baffled.reveal();
-        });
+        getDailyBingImage();
+        moment.locale('en');
+        $interval(updateTime, 1000);
+    }
+    
+    function updateTime(){
+        vm.currentDate = moment().format('LLLL');
     }
     
     function getDailyBingImage(){
@@ -27,6 +29,7 @@ function HomeController($http){
                 media_type: response.data.media_type
             };
         }, function(err){
+            $scope.$emit('toast', 'No se pudo obtener la imágen del día');
             console.log(err);
         });
     }
