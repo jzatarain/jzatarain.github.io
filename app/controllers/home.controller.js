@@ -14,11 +14,11 @@ function HomeController($http, $scope, $interval){
         moment.locale('en');
         $interval(updateTime, 1000);
     }
-    
+
     function updateTime(){
         vm.currentDate = moment().format('LLLL');
     }
-    
+
     function getDailyBingImage(){
         return $http.get('https://api.nasa.gov/planetary/apod?api_key=59ic3XmFOKWV8EbBOLHLOclSDYmCDgaO4uRawAbh')
         .then(function(response){
@@ -29,7 +29,7 @@ function HomeController($http, $scope, $interval){
                 media_type: response.data.media_type
             };
         }, function(err){
-            $scope.$emit('toast', 'No se pudo obtener la imágen del día');
+            $scope.$emit('toast', 'Unable to retrieve NASA\'s daily image');
             console.log(err);
         });
     }
